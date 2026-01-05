@@ -1,0 +1,38 @@
+{
+  "name": "vite-plugin-file-index",
+  "version": "1.0.0",
+  "description": "a vite plugin of file index",
+  "type": "module",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+   "exports": {
+    ".": {
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.cjs.js"
+    }
+  },
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "peerDependencies": {
+    "vite": "^6.0.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-babel": "^6.1.0",
+    "@rollup/plugin-commonjs": "^29.0.0",
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "rollup": "^4.54.0"
+  },
+  "author": "snow_sunset",
+  "license": "ISC",
+  "keywords": [
+    "vite",
+    "plugin",
+    "vite-plugin"
+  ],
+  "files": [
+    "dist",
+    "README.md"
+  ]
+}
