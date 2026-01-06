@@ -16,6 +16,7 @@ export default function vitePluginFileIndex() {
           // 解码 URL 路径
           const decodedPath = decodeURIComponent(urlPath);
 
+          req.url = decodeURIComponent(req.url)
           // 构建实际文件系统路径
           const rootDir = process.cwd();
           let filePath = path.join(rootDir, decodedPath);
